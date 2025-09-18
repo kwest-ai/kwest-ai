@@ -3,7 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  // For GitHub Pages with custom domain, no basePath needed
+  // Set basePath for GitHub Pages deployment
+  basePath: '/kwest-ai',
+  assetPrefix: '/kwest-ai/',
   images: {
     unoptimized: true,
   },
