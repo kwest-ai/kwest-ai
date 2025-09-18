@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Ensure assets are served correctly
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
 };
 
 export default nextConfig;
