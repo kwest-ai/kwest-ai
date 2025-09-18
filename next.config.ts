@@ -3,16 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  // Remove basePath since we're using custom domain (not GitHub subpath)
-  // basePath: '/kwest-ai',
+  // For GitHub Pages with custom domain, no basePath needed
   images: {
     unoptimized: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Ensure assets are served correctly
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
 };
 
 export default nextConfig;
