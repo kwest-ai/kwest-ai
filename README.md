@@ -2,7 +2,7 @@
 
 A modern React landing page for Kwest AI built with Create React App and deployed using GitHub Pages.
 
-## 🚀 Live Site
+## Live Site
 
 The site is automatically deployed to GitHub Pages at: `https://kwest-ai.github.io/kwest-ai`
 
