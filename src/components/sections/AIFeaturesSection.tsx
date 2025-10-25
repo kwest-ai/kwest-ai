@@ -1,6 +1,8 @@
 "use client"
 
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const AIFeaturesSection = () => {
@@ -45,13 +47,13 @@ const AIFeaturesSection = () => {
                 Instantly power up company-wide AI that connects every aspect of your work, across all your apps.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
+                <Link 
                   href="/signup" 
                   className="bg-blue-600 hover:bg-blue-700 text-white text-center font-medium px-6 py-2 rounded-full transition-colors"
                 >
                   Try for free
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/brain" 
                   className="text-blue-600 font-medium flex items-center justify-center sm:justify-start gap-1"
                 >
@@ -60,7 +62,7 @@ const AIFeaturesSection = () => {
                     <path d="M5 12h14"/>
                     <path d="m12 5 7 7-7 7"/>
                   </svg>
-                </a>
+                </Link>
               </div>
             </motion.div>
             
@@ -102,12 +104,12 @@ const AIFeaturesSection = () => {
               <p className="text-lg text-gray-600 mb-8">
                 Enterprise search plus with the power of Ask AI on all your apps. Instantly pull answers from Google Drive, GitHub, Salesforce, Figma, Dropbox, Confluence, Box, and more!
               </p>
-              <a 
+              <Link 
                 href="/connected-brain" 
                 className="bg-purple-600 hover:bg-purple-700 text-white text-center font-medium px-6 py-2 rounded-full transition-colors inline-block"
               >
                 Try Connected Brain
-              </a>
+              </Link>
             </motion.div>
             
             {/* Right content - Connected Brain image */}
