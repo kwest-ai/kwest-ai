@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { motion, useReducedMotion, Variants } from 'framer-motion';
-import Button from "../ui/button";
-import { GlassBrowser } from '../ui/glass-browser';
+import Button from "@/components/ui/button";
+import { GlassBrowser } from '@/components/ui/glass-browser';
 
 const HeroSection = () => {
   const prefersReducedMotion = useReducedMotion();

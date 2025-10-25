@@ -1,8 +1,9 @@
 "use client"
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { GlassBrowser } from '../ui/glass-browser';
+import { GlassBrowser } from '@/components/ui/glass-browser';
 
 const CTASection = () => {
   return (
@@ -27,12 +28,12 @@ const CTASection = () => {
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
               Automate test creation, eliminate flaky tests, and ship with confidence—all powered by AI that understands your codebase.
             </p>
-            <a 
+            <Link 
               href="/signup" 
               className="bg-blue-600 hover:bg-blue-700 text-white text-center font-medium px-8 py-3 rounded-full transition-colors inline-block"
             >
               Start testing
-            </a>
+            </Link>
           </motion.div>
           
           {/* Right content - App screenshot */}

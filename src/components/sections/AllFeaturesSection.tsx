@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const featuresList = [
@@ -40,7 +41,7 @@ const AllFeaturesSection = () => {
               transition={{ duration: 0.4, delay: 0.05 * (index % 8) }}
               className="group"
             >
-              <a 
+              <Link 
                 href={`/features/${feature.toLowerCase().replace(/\s+/g, '-')}`}
                 className="flex items-center gap-2 text-gray-800 hover:text-blue-600 transition-colors"
               >
@@ -48,7 +49,7 @@ const AllFeaturesSection = () => {
                   <span className="text-sm">{feature.charAt(0)}</span>
                 </div>
                 <span className="font-medium">{feature}</span>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -61,7 +62,7 @@ const AllFeaturesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <a 
+          <Link 
             href="/features" 
             className="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition-colors"
           >
@@ -70,7 +71,7 @@ const AllFeaturesSection = () => {
               <path d="M5 12h14"/>
               <path d="m12 5 7 7-7 7"/>
             </svg>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
