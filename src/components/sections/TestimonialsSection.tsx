@@ -60,9 +60,125 @@ function useCardTilt() {
   return { ref, handle, reset };
 }
 
+const TestimonialCard: React.FC<{ t: Testimonial; i: number; prefersReducedMotion: boolean | null }> = ({ t, i, prefersReducedMotion }) => {
+  const { ref, handle, reset } = useCardTilt();
+  return (
+    <motion.div
+      key={t.name}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
+      whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={prefersReducedMotion ? undefined : { duration: 0.55, delay: i * 0.05 }}
+      className="group relative"
+    >
+      <div
+        ref={ref}
+        onMouseMove={prefersReducedMotion ? undefined : handle}
+        onMouseLeave={prefersReducedMotion ? undefined : reset}
+        style={prefersReducedMotion ? undefined : {
+          transform: 'perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg))',
+          transition: 'transform 180ms ease'
+        }}
+        className="h-full rounded-2xl p-6 bg-white/70 backdrop-blur border border-indigo-100 shadow-sm hover:shadow-lg flex flex-col"
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-blue-400 text-white flex items-center justify-center font-semibold text-sm">
+            {t.name.charAt(0)}
+          </div>
+          <div>
+            <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
+            <div className="text-[11px] text-indigo-600 font-medium uppercase tracking-wide">{t.role}</div>
+          </div>
+        </div>
+
+        <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">&quot;{t.quote}&quot;</p>
+
+        {i === 0 && (
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-3 mb-3 border border-green-200">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-semibold text-green-700">Regression Cycle Time</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="text-center">
+                <div className="text-lg font-bold text-red-600">2 days</div>
+                <div className="text-xs text-gray-500">Before</div>
+              </div>
+              <div className="text-green-500">→</div>
+              <div className="text-center">
+                <div className="text-lg font-bold text-green-600">3 hrs</div>
+                <div className="text-xs text-gray-500">After</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {i === 1 && (
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-3 mb-3 border border-blue-200">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-semibold text-blue-700">Flaky Test Rate</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="text-center">
+                <div className="text-lg font-bold text-red-600">23%</div>
+                <div className="text-xs text-gray-500">Before</div>
+              </div>
+              <div className="text-blue-500">→</div>
+              <div className="text-center">
+                <div className="text-lg font-bold text-blue-600">2%</div>
+                <div className="text-xs text-gray-500">After</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {i === 2 && (
+          <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg p-3 mb-3 border border-purple-200">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-semibold text-purple-700">Test Authoring Speed</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="text-center">
+                <div className="text-lg font-bold text-red-600">2 hrs</div>
+                <div className="text-xs text-gray-500">Per test</div>
+              </div>
+              <div className="text-purple-500">→</div>
+              <div className="text-center">
+                <div className="text-lg font-bold text-purple-600">12 min</div>
+                <div className="text-xs text-gray-500">Per test</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {i === 3 && (
+          <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-3 mb-3 border border-cyan-200">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-semibold text-cyan-700">Production Rollbacks</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="text-center">
+                <div className="text-lg font-bold text-red-600">8/mo</div>
+                <div className="text-xs text-gray-500">Before</div>
+              </div>
+              <div className="text-cyan-500">→</div>
+              <div className="text-center">
+                <div className="text-lg font-bold text-cyan-600">1/mo</div>
+                <div className="text-xs text-gray-500">After</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-3 text-[11px] font-medium text-gray-500 tracking-wide">{t.company}</div>
+        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 bg-gradient-to-br from-indigo-50 to-blue-50 pointer-events-none transition" />
+      </div>
+    </motion.div>
+  );
+};
+
 const TestimonialsSection = () => {
   const prefersReducedMotion = useReducedMotion();
-  
+
   return (
     <section className="min-h-screen flex items-center py-28 bg-white relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -75,121 +191,9 @@ const TestimonialsSection = () => {
           <p className="mt-4 text-gray-600 text-lg">Real outcomes from real engineering orgs shipping faster with higher confidence.</p>
         </div>
         <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {testimonials.map((t, i) => {
-            const { ref, handle, reset } = useCardTilt();
-            return (
-              <motion.div
-                key={t.name}
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-                whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={prefersReducedMotion ? undefined : { duration: 0.55, delay: i * 0.05 }}
-                className="group relative"
-              >
-                <div
-                  ref={ref}
-                  onMouseMove={prefersReducedMotion ? undefined : handle}
-                  onMouseLeave={prefersReducedMotion ? undefined : reset}
-                  style={prefersReducedMotion ? undefined : { 
-                    transform: 'perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg))', 
-                    transition: 'transform 180ms ease' 
-                  }}
-                  className="h-full rounded-2xl p-6 bg-white/70 backdrop-blur border border-indigo-100 shadow-sm hover:shadow-lg flex flex-col"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-blue-400 text-white flex items-center justify-center font-semibold text-sm">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
-                      <div className="text-[11px] text-indigo-600 font-medium uppercase tracking-wide">{t.role}</div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">"{t.quote}"</p>
-                  
-                  {i === 0 && (
-                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-3 mb-3 border border-green-200">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-xs font-semibold text-green-700">Regression Cycle Time</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-red-600">2 days</div>
-                          <div className="text-xs text-gray-500">Before</div>
-                        </div>
-                        <div className="text-green-500">→</div>
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-green-600">3 hrs</div>
-                          <div className="text-xs text-gray-500">After</div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {i === 1 && (
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-3 mb-3 border border-blue-200">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-xs font-semibold text-blue-700">Flaky Test Rate</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-red-600">23%</div>
-                          <div className="text-xs text-gray-500">Before</div>
-                        </div>
-                        <div className="text-blue-500">→</div>
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-blue-600">2%</div>
-                          <div className="text-xs text-gray-500">After</div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {i === 2 && (
-                    <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg p-3 mb-3 border border-purple-200">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-xs font-semibold text-purple-700">Test Authoring Speed</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-red-600">2 hrs</div>
-                          <div className="text-xs text-gray-500">Per test</div>
-                        </div>
-                        <div className="text-purple-500">→</div>
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-purple-600">12 min</div>
-                          <div className="text-xs text-gray-500">Per test</div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {i === 3 && (
-                    <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-3 mb-3 border border-cyan-200">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-xs font-semibold text-cyan-700">Production Rollbacks</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-red-600">8/mo</div>
-                          <div className="text-xs text-gray-500">Before</div>
-                        </div>
-                        <div className="text-cyan-500">→</div>
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-cyan-600">1/mo</div>
-                          <div className="text-xs text-gray-500">After</div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="mt-3 text-[11px] font-medium text-gray-500 tracking-wide">{t.company}</div>
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 bg-gradient-to-br from-indigo-50 to-blue-50 pointer-events-none transition" />
-                </div>
-              </motion.div>
-            );
-          })}
+          {testimonials.map((t, i) => (
+            <TestimonialCard key={t.name} t={t} i={i} prefersReducedMotion={prefersReducedMotion} />
+          ))}
         </div>
       </div>
     </section>

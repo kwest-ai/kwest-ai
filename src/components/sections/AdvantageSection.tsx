@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Eye, Code, Users, Zap } from 'lucide-react';
+import { Eye, Users, Zap } from 'lucide-react';
 
 const differentiators = [
   {
@@ -109,7 +109,7 @@ const AdvantageSection: React.FC = () => {
                           <span className="text-green-400 text-xs font-mono">AI Agent detecting elements...</span>
                         </div>
                         <div className="space-y-1 text-xs font-mono text-gray-300">
-                          <div className="text-blue-400">🔍 Found: "Add to Cart" button</div>
+                          <div className="text-blue-400">🔍 Found: &quot;Add to Cart&quot; button</div>
                           <div className="text-green-400">✓ Element stable & clickable</div>
                           <div className="text-purple-400">🎯 No selectors needed</div>
                         </div>
@@ -167,7 +167,7 @@ const AdvantageSection: React.FC = () => {
                         </div>
                       </div>
                       <div className="space-y-2 text-xs text-left">
-                        {item.features?.map((feature, idx) => (
+                        {item.features?.map((feature) => (
                           <div key={feature} className="flex items-center gap-2">
                             <div className="w-1 h-1 rounded-full bg-purple-500" />
                             <span className="text-gray-700">{feature}</span>

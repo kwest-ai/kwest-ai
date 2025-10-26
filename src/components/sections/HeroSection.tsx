@@ -72,7 +72,7 @@ const HeroSection = () => {
               initial="hidden"
               animate="visible"
             >
-              KwestAI's vision-first agents simulate thousands of users in minutes — catching bugs before your customers encounter them.
+              KwestAI&apos;s vision-first agents simulate thousands of users in minutes — catching bugs before your customers encounter them.
             </motion.p>
 
             <motion.div
