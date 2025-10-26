@@ -24,7 +24,7 @@ const ProblemStatementSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Don't make your users QA your site for you
+              Don&apos;t make your users QA your site for you
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-lg">
               Manual testing is slow, flaky tests break constantly, and bugs slip through to production where they cost real revenue.

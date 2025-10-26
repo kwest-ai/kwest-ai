@@ -60,7 +60,6 @@ export default function RootLayout({
   <a href="#main-content" className="skip-link">Skip to main content</a>
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -81,7 +80,6 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -93,7 +91,7 @@ export default function RootLayout({
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
             })
           }}
-        />
+  />
         {children}
       </body>
     </html>

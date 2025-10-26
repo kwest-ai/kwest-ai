@@ -102,9 +102,9 @@ const UseCasesSection: React.FC = () => {
                   <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 mb-4 border border-emerald-200">
                     <div className="text-xs font-semibold text-emerald-600 mb-2">AI Assertion Example</div>
                     <div className="font-mono text-xs text-gray-700 space-y-1">
-                      <div className="text-emerald-600">✓ "User should see confirmation message"</div>
-                      <div className="text-emerald-600">✓ "Cart total should be greater than $0"</div>
-                      <div className="text-emerald-600">✓ "Email format should be valid"</div>
+                      <div className="text-emerald-600">✓ &quot;User should see confirmation message&quot;</div>
+                      <div className="text-emerald-600">✓ &quot;Cart total should be greater than $0&quot;</div>
+                      <div className="text-emerald-600">✓ &quot;Email format should be valid&quot;</div>
                     </div>
                   </div>
                 )}
@@ -203,7 +203,7 @@ const UseCasesSection: React.FC = () => {
           <div className="glass-medium rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to see KwestAI in action?</h3>
             <p className="text-gray-600 mb-6">
-              Join hundreds of teams who've transformed their QA process with autonomous testing.
+              Join hundreds of teams who&apos;ve transformed their QA process with autonomous testing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
