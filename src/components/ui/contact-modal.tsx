@@ -66,23 +66,96 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
     setIsLoading(true);
     try {
-      // Send to Formspree for email handling
-      const response = await fetch('https://formspree.io/f/xyzqkdvq', {
+      // Use Resend's REST API directly from client
+      const resendApiKey = process.env.NEXT_PUBLIC_RESEND_API_KEY;
+      
+      if (!resendApiKey) {
+        throw new Error('Resend API key is not configured');
+      }
+
+      const response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
+          'Authorization': `Bearer ${resendApiKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message
+          from: 'Contact Form <onboarding@resend.dev>',
+          to: 'kaushik.kumar@kwest-ai.com',
+          replyTo: formData.email,
+          subject: `New Contact Form Submission from ${formData.name}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f9fafb; padding: 20px; border-radius: 8px;">
+              <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <h2 style="color: #1f2937; margin-top: 0;">New Contact Form Submission</h2>
+                
+                <div style="border-left: 4px solid #4f46e5; padding-left: 16px; margin: 20px 0;">
+                  <p style="margin: 12px 0;"><strong style="color: #1f2937;">Name:</strong><br/><span style="color: #4b5563;">${formData.name}</span></p>
+                  <p style="margin: 12px 0;"><strong style="color: #1f2937;">Email:</strong><br/><a href="mailto:${formData.email}" style="color: #4f46e5; text-decoration: none;">${formData.email}</a></p>
+                  <p style="margin: 12px 0;"><strong style="color: #1f2937;">Phone:</strong><br/><span style="color: #4b5563;">${formData.phone}</span></p>
+                  <p style="margin: 12px 0;"><strong style="color: #1f2937;">Message:</strong></p>
+                  <div style="background-color: #f3f4f6; padding: 12px; border-radius: 4px; color: #4b5563; white-space: pre-wrap; word-wrap: break-word;">
+                    ${formData.message}
+                  </div>
+                </div>
+                
+                <p style="color: #6b7280; font-size: 12px; margin-top: 20px; border-top: 1px solid #e5e7eb; padding-top: 15px;">
+                  This email was sent from the KwestAI landing page contact form.
+                </p>
+              </div>
+            </div>
+          `,
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        const data = await response.json();
+        throw new Error(data.message || 'Failed to send message');
       }
+
+      // Send confirmation email to user
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${resendApiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'KwestAI <onboarding@resend.dev>',
+          to: formData.email,
+          subject: 'We received your message - KwestAI',
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f9fafb; padding: 20px; border-radius: 8px;">
+              <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <h2 style="color: #1f2937; margin-top: 0;">Thank you for reaching out!</h2>
+                <p style="color: #4b5563; line-height: 1.6;">Hi ${formData.name},</p>
+                
+                <p style="color: #4b5563; line-height: 1.6;">
+                  We've received your message and will get back to you as soon as possible. Our team typically responds within 24 hours during business days.
+                </p>
+                
+                <div style="background-color: #f3f4f6; padding: 16px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #10b981;">
+                  <p style="margin: 0 0 8px 0; color: #059669; font-weight: bold;">Your message:</p>
+                  <p style="margin: 0; color: #4b5563; white-space: pre-wrap; word-wrap: break-word;">${formData.message}</p>
+                </div>
+                
+                <p style="color: #4b5563; line-height: 1.6;">
+                  If you have any urgent matters, feel free to reach out directly at our office.
+                </p>
+                
+                <p style="color: #4b5563; line-height: 1.6; margin-top: 25px;">
+                  Best regards,<br/>
+                  <strong>The KwestAI Team</strong>
+                </p>
+                
+                <p style="color: #9ca3af; font-size: 12px; margin-top: 20px; border-top: 1px solid #e5e7eb; padding-top: 15px; margin-bottom: 0;">
+                  © 2025 KwestAI. All rights reserved.
+                </p>
+              </div>
+            </div>
+          `,
+        }),
+      }).catch(err => console.error('Confirmation email failed:', err));
 
       setSuccess(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
