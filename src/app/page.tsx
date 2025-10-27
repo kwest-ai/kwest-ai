@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import ProblemStatementSection from "@/components/sections/ProblemStatementSection";
 import StatsSection from "@/components/sections/StatsSection";
-// Removed unused legacy imports: FeatureTabsSection, WorkflowSection
 import LifecycleSimulationSection from "@/components/sections/LifecycleSimulationSection";
 import AdvantageSection from "@/components/sections/AdvantageSection";
 import UseCasesSection from "@/components/sections/UseCasesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/Footer";
+import { ContactModal } from "@/components/ui/contact-modal";
 // Legacy sections kept (commented) in case we want to reintroduce / merge specific content:
 // import FeaturesSection from "@/components/sections/FeaturesSection";
 // import AIFeaturesSection from "@/components/sections/AIFeaturesSection";
@@ -70,23 +70,26 @@ function SlideNav() {
 }
 
 export default function Home() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
     <div className="font-sans" id="top">
-      <Header />
+      <Header onContactClick={() => setIsContactModalOpen(true)} />
       <SlideNav />
+      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
       <main id="main-content">
-        <section id="hero" className="min-h-screen"><HeroSection /></section>
+        <section id="hero" className="min-h-screen"><HeroSection onContactClick={() => setIsContactModalOpen(true)} /></section>
         <section id="problem" className="min-h-screen"><ProblemStatementSection /></section>
         <section id="stats" className="min-h-screen"><StatsSection /></section>
         <section id="advantage" className="min-h-screen"><AdvantageSection /></section>
         <section id="lifecycle" className="min-h-screen"><LifecycleSimulationSection /></section>
-        <section id="usecases" className="min-h-screen"><UseCasesSection /></section>
+        <section id="usecases" className="min-h-screen"><UseCasesSection onContactClick={() => setIsContactModalOpen(true)} /></section>
         <section id="testimonials" className="min-h-screen"><TestimonialsSection /></section>
         {/* Legacy sections temporarily removed from flow to avoid repetition with new narrative-driven components */}
         {/* <FeaturesSection /> */}
         {/* <AIFeaturesSection /> */}
         {/* <AllFeaturesSection /> */}
-        <section id="cta" className="min-h-screen"><CTASection /></section>
+        <section id="cta" className="min-h-screen"><CTASection onContactClick={() => setIsContactModalOpen(true)} /></section>
       </main>
       <Footer />
     </div>

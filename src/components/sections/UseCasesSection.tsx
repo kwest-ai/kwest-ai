@@ -37,7 +37,7 @@ const useCases = [
   }
 ];
 
-const UseCasesSection: React.FC = () => {
+const UseCasesSection: React.FC<{ onContactClick?: () => void }> = ({ onContactClick }) => {
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -205,14 +205,12 @@ const UseCasesSection: React.FC = () => {
             <p className="text-gray-600 mb-6">
               Join hundreds of teams who&apos;ve transformed their QA process with autonomous testing.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-6 py-3 border border-indigo-200 text-indigo-700 font-semibold rounded-xl bg-white/60 backdrop-blur hover:bg-white/80 transition-all duration-300">
-                Book a Demo
-              </button>
-            </div>
+            <button 
+              onClick={onContactClick}
+              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Talk to us
+            </button>
           </div>
         </motion.div>
       </div>

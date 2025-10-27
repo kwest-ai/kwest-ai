@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Button from './ui/button';
 
-const Header = () => {
+const Header = ({ onContactClick }: { onContactClick?: () => void }) => {
   const [scrolled, setScrolled] = useState(false);
 
   // Handle scroll effect
@@ -40,75 +40,50 @@ const Header = () => {
           <nav className="hidden lg:flex items-center gap-8">
             <NavItem title="Features" scrolled={scrolled} hasDropdown>
               <div className="py-2 grid grid-cols-2 gap-2 w-[400px]">
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">AI-Powered Testing</div>
-                  <div className="text-xs text-gray-500">Advanced intelligent test automation</div>
-                </Link>
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">Smart Assertions</div>
-                  <div className="text-xs text-gray-500">Natural language test verification</div>
-                </Link>
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">Visual Testing</div>
-                  <div className="text-xs text-gray-500">Pixel-perfect UI validation</div>
-                </Link>
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">Cross-Browser Testing</div>
-                  <div className="text-xs text-gray-500">Test across all popular browsers</div>
-                </Link>
+                <div className="block px-4 py-3 text-sm text-gray-700">
+                  <div className="font-medium mb-1">✨ AI-Powered Testing</div>
+                  <div className="text-xs text-gray-500">Intelligent test automation</div>
+                </div>
+                <div className="block px-4 py-3 text-sm text-gray-700">
+                  <div className="font-medium mb-1">🎯 Smart Assertions</div>
+                  <div className="text-xs text-gray-500">Natural language verification</div>
+                </div>
+                <div className="block px-4 py-3 text-sm text-gray-700">
+                  <div className="font-medium mb-1">🖼️ Visual Testing</div>
+                  <div className="text-xs text-gray-500">UI pixel-perfect validation</div>
+                </div>
+                <div className="block px-4 py-3 text-sm text-gray-700">
+                  <div className="font-medium mb-1">🌍 Cross-Browser</div>
+                  <div className="text-xs text-gray-500">Test all popular browsers</div>
+                </div>
               </div>
             </NavItem>
             <NavItem title="Solutions" scrolled={scrolled} hasDropdown>
               <div className="py-2">
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">For QA Teams</div>
+                <div className="block px-4 py-3 text-sm text-gray-700">
+                  <div className="font-medium mb-1">👥 QA Teams</div>
                   <div className="text-xs text-gray-500">Streamline testing workflows</div>
-                </Link>
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">For Developers</div>
+                </div>
+                <div className="block px-4 py-3 text-sm text-gray-700">
+                  <div className="font-medium mb-1">💻 Developers</div>
                   <div className="text-xs text-gray-500">Ship code with confidence</div>
-                </Link>
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">For Product Teams</div>
-                  <div className="text-xs text-gray-500">Release better products faster</div>
-                </Link>
+                </div>
+                <div className="block px-4 py-3 text-sm text-gray-700">
+                  <div className="font-medium mb-1">🚀 Product Teams</div>
+                  <div className="text-xs text-gray-500">Release faster, better products</div>
+                </div>
               </div>
             </NavItem>
-            <NavItem title="Resources" scrolled={scrolled} hasDropdown>
-              <div className="py-2">
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">Documentation</div>
-                  <div className="text-xs text-gray-500">Comprehensive guides and tutorials</div>
-                </Link>
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">Blog</div>
-                  <div className="text-xs text-gray-500">Latest news and best practices</div>
-                </Link>
-                <Link href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-                  <div className="font-medium mb-1">Case Studies</div>
-                  <div className="text-xs text-gray-500">See how others use KwestAI</div>
-                </Link>
-              </div>
-            </NavItem>
-            <NavItem title="Pricing" scrolled={scrolled} href="/pricing" />
           </nav>
         </div>
         
         <div className="flex items-center gap-4">
-          <Link 
-            href="/login" 
-            className={`hidden sm:block text-sm font-medium transition-colors ${
-              scrolled ? 'text-gray-600 hover:text-indigo-700' : 'text-white hover:text-indigo-200'
-            }`}
-          >
-            Log In
-          </Link>
           <Button 
-            href="/demo"
+            onClick={onContactClick}
             variant={scrolled ? "primary" : "ghost"}
             size="md"
           >
-            Book a Demo
+            Talk to us
           </Button>
         </div>
       </div>

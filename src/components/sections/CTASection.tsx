@@ -1,11 +1,10 @@
 "use client"
 
 import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { GlassBrowser } from '@/components/ui/glass-browser';
 
-const CTASection = () => {
+const CTASection = ({ onContactClick }: { onContactClick?: () => void }) => {
   return (
   <section className="min-h-screen flex items-center py-24 bg-gradient-to-b from-indigo-50 via-white to-white">
       {/* Background decorations */}
@@ -28,12 +27,12 @@ const CTASection = () => {
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
               Automate test creation, eliminate flaky tests, and ship with confidence—all powered by AI that understands your codebase.
             </p>
-            <Link 
-              href="/signup" 
+            <button 
+              onClick={onContactClick}
               className="bg-blue-600 hover:bg-blue-700 text-white text-center font-medium px-8 py-3 rounded-full transition-colors inline-block"
             >
-              Start testing
-            </Link>
+              Talk to us
+            </button>
           </motion.div>
           
           {/* Right content - App screenshot */}
