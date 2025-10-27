@@ -66,12 +66,18 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
     setIsLoading(true);
     try {
-      const response = await fetch('/api/contact', {
+      // Send to Formspree for email handling
+      const response = await fetch('https://formspree.io/f/xyzqkdvq', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        }),
       });
 
       if (!response.ok) {
