@@ -2,10 +2,9 @@
 
 import React from 'react';
 import { motion, useReducedMotion, Variants } from 'framer-motion';
-import Button from "@/components/ui/button";
 import { GlassBrowser } from '@/components/ui/glass-browser';
 
-const HeroSection = () => {
+const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
   const prefersReducedMotion = useReducedMotion();
   const containerAnimation: Variants = prefersReducedMotion
     ? { hidden: { opacity: 1 }, visible: { opacity: 1 } }
@@ -76,23 +75,17 @@ const HeroSection = () => {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mt-10"
+              className="flex justify-center lg:justify-start mt-10"
               variants={itemAnimation}
               initial="hidden"
               animate="visible"
             >
-              <Button 
-                href="/signup" 
-                className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+              <button 
+                onClick={onContactClick}
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
-                Start Free Trial
-              </Button>
-              <Button 
-                href="/demo" 
-                className="bg-white/80 backdrop-blur-sm border border-gray-300 text-gray-700 hover:bg-white/90 px-8 py-4 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-200"
-              >
-                Book a Demo
-              </Button>
+                Talk to us
+              </button>
             </motion.div>
           </motion.div>
 

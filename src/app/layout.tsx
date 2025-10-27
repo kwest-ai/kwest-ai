@@ -91,7 +91,7 @@ export default function RootLayout({
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
             })
           }}
-  />
+        />
         {children}
       </body>
     </html>

@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   output: "export",
-  basePath: "/nextjs-github-pages",
+  // Disable Image Optimization for static export
   images: {
     unoptimized: true,
   },
