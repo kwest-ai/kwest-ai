@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-// Using Google Forms submission (client-side) — configured via environment variables
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -13,7 +12,6 @@ interface ContactModalProps {
 interface FormData {
   name: string;
   email: string;
-  company: string;
   phone: string;
   message: string;
 }
@@ -22,15 +20,12 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    company: '',
     phone: '',
     message: ''
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
-
-  // No client-side email SDK initialized here; we post to Google Forms instead.
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -71,48 +66,21 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
     setIsLoading(true);
     try {
-      const actionUrl = process.env.NEXT_PUBLIC_GOOGLE_FORM_ACTION;
-      const entryName = process.env.NEXT_PUBLIC_GOOGLE_ENTRY_NAME;
-      const entryEmail = process.env.NEXT_PUBLIC_GOOGLE_ENTRY_EMAIL;
-      const entryCompany = process.env.NEXT_PUBLIC_GOOGLE_ENTRY_COMPANY;
-      const entryPhone = process.env.NEXT_PUBLIC_GOOGLE_ENTRY_PHONE;
-      const entryMessage = process.env.NEXT_PUBLIC_GOOGLE_ENTRY_MESSAGE;
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      if (!actionUrl || !entryName || !entryEmail || !entryCompany || !entryPhone || !entryMessage) {
-        throw new Error('Google Form is not configured. Please set the NEXT_PUBLIC_GOOGLE_* env variables.');
+      if (!response.ok) {
+        throw new Error('Failed to send message');
       }
 
-      const params = new URLSearchParams();
-      params.append(entryName, formData.name);
-      params.append(entryEmail, formData.email);
-      params.append(entryCompany, formData.company);
-      params.append(entryPhone, formData.phone);
-      params.append(entryMessage, formData.message);
-
-      // Debug: Log what we're sending
-      console.log('Submitting to Google Form:', actionUrl);
-      console.log('Form data:', {
-        [entryName]: formData.name,
-        [entryEmail]: formData.email,
-        [entryCompany]: formData.company,
-        [entryPhone]: formData.phone,
-        [entryMessage]: formData.message,
-      });
-
-      // Google Forms does not allow CORS for form submissions; use no-cors mode.
-      // The request will be submitted but the response will be opaque. Treat as success.
-      await fetch(actionUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: params.toString(),
-      });
-
       setSuccess(true);
-      setFormData({ name: '', email: '', company: '', phone: '', message: '' });
-
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      
       // Close modal after 2 seconds
       setTimeout(() => {
         onClose();
@@ -211,21 +179,6 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="your@email.com"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent outline-none transition"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        placeholder="Your company name"
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent outline-none transition"
                       />
                     </div>
