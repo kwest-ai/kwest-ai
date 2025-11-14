@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  
+  {% seo %}
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <a href="{{ '/' | relative_url }}" class="logo">
+            <img class="logo-img" src="{{ '/logo.png' | relative_url }}" alt="Kwest AI logo" style="height:160px; width:auto;">
+          </a>
+          
+          <ul class="nav-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#problem">Why Kwest AI</a></li>
+            <li><a href="#stats">Results</a></li>
+            <li><a href="#advantage">Features</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+          
+          <button class="nav-cta" onclick="openContactModal()">Get Started</button>
+          
+          <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img class="logo-img" src="{{ '/logo.png' | relative_url }}" alt="Kwest AI logo" style="height:300px; width:auto;">
+          </div>
+          <p class="footer-tagline">We help restaurants grow with data</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#advantage">Features</a></li>
+              <li><a href="#stats">Pricing</a></li>
+              <li><a href="#testimonials">Case Studies</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#problem">About Us</a></li>
+              <li><a href="#cta">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">API Docs</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; {{ 'now' | date: "%Y" }} Kwest AI. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+      document.querySelector('.mobile-menu-toggle').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

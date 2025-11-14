@@ -61,10 +61,10 @@ function progressEmoji(label: string, target: number, current: number) {
 
 const StatsSection = () => {
   const stats: StatCardProps[] = [
-    { label: 'Automated Tests Executed', value: 125000, suffix: '+', description: 'Scale parallel test execution across browsers & environments.' },
-    { label: 'Bugs Caught Pre-Release', value: 9800, suffix: '+', description: 'Prevent escaped defects before they impact users.' },
-    { label: 'Engineering Hours Saved / Mo', value: 420, suffix: '+', description: 'AI self-healing & autonomous authoring remove repetitive work.' },
-    { label: 'MTTR Improvement (%)', value: 65, suffix: '%', description: 'Faster root-cause isolation with intelligent traces & context.' },
+    { label: 'Restaurants Powered', value: 2400, suffix: '+', description: 'From fast casual to fine dining, thousands of locations trust Kwest AI.' },
+    { label: 'Guest Profiles Analyzed', value: 18500000, suffix: '+', description: 'AI-powered insights across millions of unique restaurant guests.' },
+    { label: 'Average Revenue Increase', value: 23, suffix: '%', description: 'Data-driven decisions unlock hidden revenue opportunities.' },
+    { label: 'Marketing ROI Improvement', value: 3.2, suffix: 'X', description: 'Turn marketing spend into measurable, trackable returns.' },
   ];
 
   return (
@@ -74,8 +74,8 @@ const StatsSection = () => {
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-14 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">Proven impact at scale</h2>
-          <p className="mt-4 text-gray-600 text-lg">Accelerate delivery without trading off quality — measurable, compounding returns from day one.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">Powering growth for leading restaurants</h2>
+          <p className="mt-4 text-gray-600 text-lg">From single locations to multi-unit chains — measurable results from day one.</p>
         </div>
 
         {/* Main Stats Grid */}

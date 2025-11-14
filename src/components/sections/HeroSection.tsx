@@ -52,7 +52,7 @@ const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
             <motion.div variants={itemAnimation} initial="hidden" animate="visible">
               <span className="inline-flex items-center gap-2 px-5 py-1.5 bg-white/70 backdrop-blur-md text-indigo-700 rounded-full text-sm font-medium shadow-sm border border-indigo-100">
                 <span className="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 animate-pulse" />
-                AI-Powered QA Platform
+                AI-Powered Restaurant Analytics
               </span>
             </motion.div>
 
@@ -62,7 +62,7 @@ const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
               initial="hidden"
               animate="visible"
             >
-              Launch Agentic QA<br className="hidden sm:block" /> that actually works
+              Grow your restaurant<br className="hidden sm:block" /> faster with guest data
             </motion.h1>
 
             <motion.p
@@ -71,7 +71,7 @@ const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
               initial="hidden"
               animate="visible"
             >
-              KwestAI&apos;s vision-first agents simulate thousands of users in minutes — catching bugs before your customers encounter them.
+              The agentic AI analytics platform that measures how every marketing, menu, and operational decision impacts your guests.
             </motion.p>
 
             <motion.div
@@ -100,20 +100,20 @@ const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
               <GlassBrowser intensity="high" colorTint="none" className="shadow-xl border border-indigo-100 bg-white/70 backdrop-blur-lg">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center mb-2">
-                    <div className="font-medium text-gray-800">E-Commerce Flow Test Suite</div>
+                    <div className="font-medium text-gray-800">Guest Lifecycle Dashboard</div>
                     <div className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full flex items-center gap-1">
                       <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                      Running
+                      Live
                     </div>
                   </div>
                   <div className="space-y-2">
                     {[
-                      { step: "Navigate to product page", time: "1.2s" },
-                      { step: "Add item to cart", time: "0.8s" },
-                      { step: "Proceed to checkout", time: "2.1s" },
-                      { step: "Fill shipping details", time: "3.4s" },
-                      { step: "Complete payment", time: "..." },
-                      { step: "Verify order confirmation", time: "..." }
+                      { step: "New Guest Acquisition", value: "+247" },
+                      { step: "Repeat Visit Rate", value: "68%" },
+                      { step: "Average Order Value", value: "$42.50" },
+                      { step: "Guest Lifetime Value", value: "$890" },
+                      { step: "Churn Risk Guests", value: "12" },
+                      { step: "Marketing ROI", value: "3.2x" }
                     ].map((item, i) => {
                       const states = ['done','done','done','active','pending','pending'];
                       const state = states[i];
@@ -121,37 +121,37 @@ const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
                         <div key={item.step} className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             {state==='done' && <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center text-white text-[10px]">✓</div>}
-                            {state==='active' && <div className="w-4 h-4 rounded-full bg-indigo-500 flex items-center justify-center text-white text-[10px] animate-spin">⟳</div>}
+                            {state==='active' && <div className="w-4 h-4 rounded-full bg-indigo-500 flex items-center justify-center text-white text-[10px] animate-pulse">📊</div>}
                             {state==='pending' && <div className="w-4 h-4 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-[10px]">•</div>}
                             <div className={`text-sm ${state==='pending' ? 'text-gray-400' : 'text-gray-700'}`}>{item.step}</div>
                           </div>
-                          <div className="text-xs text-gray-500 font-mono">{item.time}</div>
+                          <div className="text-xs text-indigo-600 font-semibold">{item.value}</div>
                         </div>
                       )
                     })}
                   </div>
                   <div className="text-xs text-gray-500 pt-2 border-t border-gray-200 flex items-center justify-between">
-                    <span>Chrome • Firefox • Safari • Edge</span>
-                    <span className="text-indigo-600 font-medium">6/8 flows completed</span>
+                    <span>📍 All Locations</span>
+                    <span className="text-indigo-600 font-medium">Updated 2 mins ago</span>
                   </div>
                 </div>
               </GlassBrowser>
             </div>
 
-            {/* Bug Detection Panel */}
+            {/* AI Insights Panel */}
             <motion.div
-              className="absolute -right-6 top-8 w-48 bg-white/85 backdrop-blur-md rounded-xl p-3 shadow-lg border border-red-100"
+              className="absolute -right-6 top-8 w-48 bg-white/85 backdrop-blur-md rounded-xl p-3 shadow-lg border border-green-100"
               initial={prefersReducedMotion ? undefined : { opacity: 0, x: 30 }}
               animate={prefersReducedMotion ? undefined : { opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              <div className="text-xs font-semibold text-red-600 mb-2 flex items-center gap-1">
-                🐛 Bug Detected
+              <div className="text-xs font-semibold text-green-600 mb-2 flex items-center gap-1">
+                🤖 AI Insight
               </div>
-              <div className="text-xs text-gray-700 mb-2">Payment button unresponsive on mobile Safari</div>
+              <div className="text-xs text-gray-700 mb-2">"Your lunch special promo drove 23% more first-time orders"</div>
               <div className="flex items-center justify-between text-[10px]">
-                <span className="text-gray-500">Severity: High</span>
-                <span className="bg-red-100 text-red-700 px-1.5 py-0.5 rounded">Critical</span>
+                <span className="text-gray-500">Impact: High</span>
+                <span className="bg-green-100 text-green-700 px-1.5 py-0.5 rounded">Actionable</span>
               </div>
             </motion.div>
 
@@ -162,19 +162,19 @@ const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
               animate={prefersReducedMotion ? undefined : { opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              <div className="text-xs font-semibold text-gray-600 mb-2">Performance Metrics</div>
+              <div className="text-xs font-semibold text-gray-600 mb-2">This Week</div>
               <div className="space-y-1">
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-500">Load Time</span>
-                  <span className="text-green-600 font-medium">1.2s</span>
+                  <span className="text-gray-500">New Guests</span>
+                  <span className="text-green-600 font-medium">+342</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-500">Accessibility</span>
-                  <span className="text-green-600 font-medium">96/100</span>
+                  <span className="text-gray-500">Repeat Rate</span>
+                  <span className="text-green-600 font-medium">72%</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-500">SEO Score</span>
-                  <span className="text-yellow-600 font-medium">84/100</span>
+                  <span className="text-gray-500">Avg Check</span>
+                  <span className="text-indigo-600 font-medium">$45.80</span>
                 </div>
               </div>
             </motion.div>
@@ -187,27 +187,27 @@ const HeroSection = ({ onContactClick }: { onContactClick?: () => void }) => {
               transition={{ delay: 1.0, duration: 0.6 }}
             >
               <div className="text-xs font-semibold text-purple-600 mb-2 flex items-center gap-1">
-                🤖 AI Insights
+                📊 Menu Optimization
               </div>
-              <div className="text-xs text-gray-700 mb-2">Detected 3 potential user experience issues in checkout flow</div>
+              <div className="text-xs text-gray-700 mb-2">AI detected 3 underperforming items. Consider replacing with trending options.</div>
               <div className="flex items-center gap-2">
                 <div className="flex-1 bg-gray-200 rounded-full h-1">
                   <div className="bg-purple-500 h-1 rounded-full w-3/4"></div>
                 </div>
-                <span className="text-[10px] text-gray-500">75% analyzed</span>
+                <span className="text-[10px] text-gray-500">75% optimized</span>
               </div>
             </motion.div>
 
-            {/* Test Coverage Indicator */}
+            {/* Guest Retention Indicator */}
             <motion.div
               className="absolute -left-4 bottom-8 w-40 bg-white/85 backdrop-blur-md rounded-xl p-3 shadow-lg border border-blue-100"
               initial={prefersReducedMotion ? undefined : { opacity: 0, y: 30 }}
               animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.6 }}
             >
-              <div className="text-xs font-semibold text-blue-600 mb-1">Test Coverage</div>
-              <div className="text-lg font-bold text-blue-600">94.2%</div>
-              <div className="text-xs text-gray-500">Critical paths covered</div>
+              <div className="text-xs font-semibold text-blue-600 mb-1">Guest Retention</div>
+              <div className="text-lg font-bold text-blue-600">68.4%</div>
+              <div className="text-xs text-gray-500">Return within 30 days</div>
             </motion.div>
           </motion.div>
         </div>

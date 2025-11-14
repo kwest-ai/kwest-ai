@@ -1,0 +1,31 @@
+# Site settings
+title: Kwest AI
+description: Grow your restaurant faster with guest data. AI-powered analytics for restaurants.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://kwest-ai.com" # the base hostname & protocol for your site
+email: contact@kwestai.com
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - next.config.ts
+  - next-env.d.ts
+  - tsconfig.json
+  - eslint.config.mjs
+  - postcss.config.mjs
+  - src
+  - README.md
+  - DEPLOYMENT.md
+  - GITHUB_SETUP_NEXT_STEPS.md
+
+# Collections
+collections:
+  sections:
+    output: false
+
+plugins:
+  - jekyll-seo-tag

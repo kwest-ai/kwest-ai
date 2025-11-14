@@ -15,7 +15,7 @@ const ProblemStatementSection = () => {
           <div className="noise-layer" />
           <div className="glass-grid-overlay" />
           <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* "QA is broken" section with broken test mockup */}
+          {/* "Data is everywhere" section */}
           <motion.div 
             className="flex-1 mb-10 lg:mb-0"
             initial={{ opacity: 0, x: -30 }}
@@ -24,40 +24,93 @@ const ProblemStatementSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Don&apos;t make your users QA your site for you
+              Most restaurant owners are leaving money on the table
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-lg">
-              Manual testing is slow, flaky tests break constantly, and bugs slip through to production where they cost real revenue.
+              You're already collecting mountains of data from POS systems, online orders, and reservations. But without AI-powered analytics, you're flying blind.
             </p>
 
-            {/* Broken Test Interface Mockup */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-lg border border-red-200 p-4 shadow-lg">
+            {/* Scattered Data Mockup */}
+            <div className="bg-white/60 backdrop-blur-sm rounded-lg border border-yellow-200 p-4 shadow-lg">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium text-gray-700">Legacy Test Suite</span>
-                <span className="bg-red-100 text-red-700 text-xs px-2 py-1 rounded-full flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                  Failed
+                <span className="text-sm font-medium text-gray-700">Your Data Today</span>
+                <span className="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded-full flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                  Scattered
                 </span>
               </div>
               <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2 text-red-600">
-                  ❌ Login button selector changed
+                <div className="flex items-center gap-2 text-gray-600">
+                  📊 POS data in 5 different systems
                 </div>
-                <div className="flex items-center gap-2 text-red-600">
-                  ❌ Checkout form timeout
+                <div className="flex items-center gap-2 text-gray-600">
+                  📱 Online orders siloed in apps
                 </div>
                 <div className="flex items-center gap-2 text-yellow-600">
-                  ⚠️  Payment test flaky (3rd retry)
+                  ⚠️  No way to track guest lifecycle
                 </div>
                 <div className="flex items-center gap-2 text-gray-400">
-                  ⏸️ Search test skipped
+                  ❌ Marketing ROI? Anyone's guess
                 </div>
               </div>
               <div className="mt-3 text-xs text-gray-500 border-t border-gray-200 pt-2">
-                Last run: 2 hours ago • 67% tests failing
+                Result: Decisions based on gut feel, not data
               </div>
             </div>
           </motion.div>
+          
+          {/* "Let AI unite your data" section */}
+          <motion.div 
+            className="flex-1"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-indigo-600">
+              Let Kwest AI be your analytics team
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-lg">
+              Agentic AI that unifies all your data sources, tracks every guest journey, and tells you exactly what drives revenue.
+            </p>
+            
+            {/* Unified Analytics Interface Mockup */}
+            <div className="bg-white/70 backdrop-blur-md rounded-lg border border-green-200 p-4 shadow-lg">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-medium text-gray-700">Kwest AI Unified Analytics</span>
+                <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  Analyzing
+                </span>
+              </div>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center gap-2 text-green-600">
+                  ✅ All data sources unified
+                </div>
+                                <div className="flex items-center gap-2 text-green-600">
+                  ✅ Guest profiles auto-created
+                </div>
+                <div className="flex items-center gap-2 text-green-600">
+                  ✅ Lifecycle tracking enabled
+                </div>
+                <div className="flex items-center gap-2 text-blue-600">
+                  🤖 AI discovering revenue patterns...
+                </div>
+              </div>
+              <div className="mt-3 text-xs text-gray-500 border-t border-gray-200 pt-2">
+                Real-time insights • Actionable recommendations • 10X ROI
+              </div>
+            </div>
+
+            <div className="mt-6 flex items-center gap-4">
+              <div className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">
+                🚀 Automated insights
+              </div>
+              <div className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
+                🧠 AI-powered
+              </div>
+            </div>
+          </motion.div>"
           
           {/* "Let's fix it" section with AI agent mockup */}
           <motion.div 
