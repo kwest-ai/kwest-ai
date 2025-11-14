@@ -21,6 +21,12 @@ exclude:
   - README.md
   - DEPLOYMENT.md
   - GITHUB_SETUP_NEXT_STEPS.md
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Gemfile
+  - Gemfile.lock
 
 # Collections
 collections:
