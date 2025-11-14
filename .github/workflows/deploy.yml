@@ -39,9 +39,10 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --verbose
         env:
           JEKYLL_ENV: production
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
