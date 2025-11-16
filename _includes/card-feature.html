@@ -7,7 +7,7 @@
   {% endif %}
   <div class="card-feature__content">
     {% if include.icon %}
-      <div class="card-feature__icon">{{ include.icon }}</div>
+      <div class="card-feature__icon"><i class="{{ include.icon }}"></i></div>
     {% endif %}
     <h3 class="card-feature__title">{{ include.title }}</h3>
     <p class="card-feature__description">{{ include.description }}</p>

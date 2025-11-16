@@ -2,11 +2,14 @@
 - step_number: "1"
   title: "Connect Your Data"
   body: "Integrate with your POS, delivery, loyalty, and marketing systems. Kwest AI unifies everything."
+  icon: "fas fa-plug"
 
 - step_number: "2"
   title: "Discover Guest Insights"
   body: "Automatic analysis reveals guest behavior patterns, preferences, and revenue drivers you never knew existed."
+  icon: "fas fa-search-dollar"
 
 - step_number: "3"
   title: "Activate with Precision"
   body: "Execute targeted marketing, optimize menus, and make data-driven operations decisions that drive immediate ROI."
+  icon: "fas fa-rocket"

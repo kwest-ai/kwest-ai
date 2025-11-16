@@ -1,7 +1,7 @@
 <!-- Question Card Component -->
 <div class="card card-question">
   {% if include.icon %}
-    <div class="card-question__icon">{{ include.icon }}</div>
+    <div class="card-question__icon"><i class="{{ include.icon }}"></i></div>
   {% endif %}
   <p class="card-question__text">{{ include.question }}</p>
 </div>

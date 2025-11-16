@@ -1,27 +1,27 @@
 # Questions: From Assumptions to Answers
-- icon: "❓"
+- icon: "fas fa-user-clock"
   question: "How often do my best guests visit?"
 
-- icon: "❓"
+- icon: "fas fa-dollar-sign"
   question: "Which menu items drive the highest profit?"
 
-- icon: "❓"
+- icon: "fas fa-user-slash"
   question: "Why are guests churning?"
 
-- icon: "❓"
+- icon: "fas fa-users"
   question: "What demographics matter for my brand?"
 
-- icon: "❓"
+- icon: "fas fa-chart-pie"
   question: "Which marketing channels convert best?"
 
-- icon: "❓"
+- icon: "fas fa-exchange-alt"
   question: "How do delivery vs. dine-in guests differ?"
 
-- icon: "❓"
+- icon: "fas fa-tags"
   question: "Which promotions actually drive revenue?"
 
-- icon: "❓"
+- icon: "fas fa-hand-holding-usd"
   question: "What's my true customer acquisition cost?"
 
-- icon: "❓"
+- icon: "fas fa-brain"
   question: "How can I predict churn before it happens?"

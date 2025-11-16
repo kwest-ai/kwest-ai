@@ -1,27 +1,21 @@
 # Integration & Channel Cards
-- icon: 📱
-  label: "POS Systems"
-
-- icon: 🚗
-  label: "Delivery Apps"
-
-- icon: 💳
-  label: "Payment Gateways"
-
-- icon: 🎫
-  label: "Loyalty Programs"
-
-- icon: 📝
-  label: "Reservations"
-
-- icon: 📊
-  label: "Analytics"
-
-- icon: 📧
-  label: "Email Marketing"
-
-- icon: 💬
-  label: "SMS/Push"
-
-- icon: 🛍️
-  label: "E-Commerce"
+- name: "Toast"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/2/22/Toast_logo.svg"
+- name: "Square"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Square%2C_Inc._logo.svg"
+- name: "Clover"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Clover_logo.svg"
+- name: "DoorDash"
+  logo: "https://static.cdnlogo.com/logos/d/58/doordash.svg"
+- name: "Uber Eats"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Uber_Eats_2020_logo.svg"
+- name: "Grubhub"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Grubhub_Logo.svg"
+- name: "Stripe"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Stripe_Logo%2C_revised_2016.svg"
+- name: "PayPal"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+- name: "Shopify"
+  logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo.svg"
+- name: "MarginEdge"
+  logo: "https://www.marginedge.com/wp-content/uploads/2023/08/marginedge-logo-new.png"

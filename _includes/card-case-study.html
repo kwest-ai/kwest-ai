@@ -1,0 +1,12 @@
+<!-- Case Study Card Component -->
+<div class="card card-case-study">
+  <div class="card-case-study__image">
+    <img src="{{ include.image }}" alt="{{ include.title }}" loading="lazy">
+  </div>
+  <div class="card-case-study__content">
+    <h3 class="card-case-study__client">{{ include.client }}</h3>
+    <h4 class="card-case-study__title">{{ include.title }}</h4>
+    <p class="card-case-study__summary">{{ include.summary }}</p>
+    <a href="{{ include.url }}" class="card-case-study__link">Read case study →</a>
+  </div>
+</div>

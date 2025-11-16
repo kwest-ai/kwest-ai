@@ -6,10 +6,6 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 
 <!-- Hero Section -->
 <section class="hero-section">
-  <div class="hero-background">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=600&fit=crop" alt="Restaurant dashboard" class="hero-background-image">
-    <div class="hero-overlay"></div>
-  </div>
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">
@@ -17,32 +13,56 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
         AI-Powered Restaurant Analytics
       </div>
 
-      <h1 class="hero-title">Turn guest data into revenue.</h1>
+      <h1 class="hero-title">The Modern Guest Data Platform for Restaurants</h1>
 
       <p class="hero-description">
-        Kwest AI unifies all your guest data—from POS to delivery to loyalty—so you can make smarter decisions about menus, marketing, and operations.
+        Kwest AI is the single source of truth for all your guest data. Unify your POS, delivery, and loyalty data to make smarter decisions and drive revenue growth.
       </p>
 
       <div class="hero-ctas">
         <button class="cta-button cta-primary" onclick="openContactModal()">Book a demo</button>
-        <button class="cta-button cta-secondary">View features</button>
+        <a href="#features" class="cta-button cta-secondary">Learn More</a>
       </div>
 
       <p class="hero-subtext">Used by multi-unit restaurant brands from fast casual to fine dining across 2,000+ locations worldwide.</p>
+    </div>
+    <div class="hero-image">
+      <img src="https://elements-cover-images-0.imgix.net/a11be24c-7a26-4293-9c84-802c77f0906a?auto=compress%2Cformat&fit=max&w=1370&s=1f953046f40751996765793473b1d9d9" alt="Kwest AI Dashboard">
     </div>
   </div>
 </section>
 
 <!-- Trusted By Section -->
-<section class="trusted-section">
+<section class="trusted-by-section fade-in-section">
   <div class="container">
-    <h2 class="section-title">Trusted by restaurant leaders</h2>
-    <p class="section-subtitle">Managing 100+ to 500+ locations, these brands rely on Kwest AI to drive growth.</p>
+    <h3 class="trusted-by-title">Trusted by restaurants nationwide</h3>
+    <div class="logos-grid">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-1495593-1267764.png" alt="Restaurant Logo 1">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-176-111405.png" alt="Restaurant Logo 2">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-1851559-1569269.png" alt="Restaurant Logo 3">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-1659556-1410015.png" alt="Restaurant Logo 4">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-218-111415.png" alt="Restaurant Logo 5">
+    </div>
+  </div>
+</section>
+
+<!-- Trusted By Section -->
+<section class="trusted-section fade-in-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-subtitle">We are a team of restaurant industry veterans and data scientists passionate about helping restaurants thrive.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Our team">
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Features Section -->
-<section class="features-section" id="features">
+<section class="features-section fade-in-section section-divider" id="features">
   <div class="container">
     <h2 class="section-title">Turning data into action</h2>
     <p class="section-subtitle">Kwest AI empowers restaurants with the same guest intelligence tools as enterprise retail.</p>
@@ -55,22 +75,37 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
   </div>
 </section>
 
+<!-- Detailed Features Section -->
+<section class="detailed-features-section fade-in-section">
+  <div class="container">
+    <div class="detailed-features-wrapper" id="detailed-features-wrapper">
+      {% for feature in site.data.detailed_features %}
+        {% include card-detailed-feature.html title=feature.title description=feature.description image=feature.image %}
+      {% endfor %}
+    </div>
+    <div class="scroll-buttons">
+      <button class="scroll-button" onclick="scrollDetailedFeatures(-1)">&#8249;</button>
+      <button class="scroll-button" onclick="scrollDetailedFeatures(1)">&#8250;</button>
+    </div>
+  </div>
+</section>
+
 <!-- Integrations Section -->
-<section class="integrations-section">
+<section class="integrations-section fade-in-section">
   <div class="container">
     <h2 class="section-title">Connect all your data</h2>
     <p class="section-subtitle">Kwest AI integrates with every system you use—POS, delivery, loyalty, marketing, payments, and more.</p>
 
     <div class="channels-grid">
       {% for channel in site.data.channels %}
-        {% include card-channel.html icon=channel.icon label=channel.label %}
+        {% include card-channel.html name=channel.name logo=channel.logo %}
       {% endfor %}
     </div>
   </div>
 </section>
 
 <!-- Testimonials Section -->
-<section class="testimonials-section">
+<section class="testimonials-section fade-in-section section-divider">
   <div class="container">
     <h2 class="section-title">Fueling growth for restaurant brands</h2>
     <p class="section-subtitle">Real results from real restaurants using Kwest AI.</p>
@@ -83,8 +118,21 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
   </div>
 </section>
 
+<!-- Case Studies Section -->
+<section class="case-studies-section fade-in-section">
+  <div class="container">
+    <h2 class="section-title">Success Stories</h2>
+    <p class="section-subtitle">See how leading restaurant brands are using Kwest AI to drive growth.</p>
+    <div class="case-studies-grid">
+      {% for study in site.data.case_studies %}
+        {% include card-case-study.html client=study.client title=study.title summary=study.summary url=study.url image=study.image %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- Questions Section -->
-<section class="questions-section">
+<section class="questions-section fade-in-section">
   <div class="container">
     <h2 class="section-title">From assumptions to answers</h2>
     <p class="section-subtitle">Get real insights into your guest behavior, menu performance, and revenue drivers.</p>
@@ -98,7 +146,7 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 </section>
 
 <!-- Security Section -->
-<section class="security-section">
+<section class="security-section fade-in-section">
   <div class="container">
     <h2 class="section-title">Enterprise security & compliance</h2>
     <p class="section-subtitle">Your guest data is protected with bank-level security and full compliance.</p>
@@ -112,7 +160,7 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 </section>
 
 <!-- Steps Section -->
-<section class="steps-section">
+<section class="steps-section fade-in-section" id="steps">
   <div class="container">
     <h2 class="section-title">How Kwest AI works</h2>
     <p class="section-subtitle">Three simple steps to transform your restaurant operations.</p>
@@ -126,7 +174,7 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 </section>
 
 <!-- Final CTA Section -->
-<section class="final-cta-section">
+<section class="final-cta-section fade-in-section">
   <div class="container">
     <h2>Ready to grow?</h2>
     <p>Join restaurant brands that are using data to outcompete the competition.</p>
@@ -142,9 +190,7 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
     <form class="contact-form">
       <input type="text" placeholder="Your name" required>
       <input type="email" placeholder="Work email" required>
-      <input type="tel" placeholder="Phone number" required>
-      <textarea placeholder="Tell us about your restaurant group..." required></textarea>
-      <button type="submit" class="cta-button cta-primary">Send request</button>
+      <button type="submit" class="cta-button cta-primary">Book a Demo</button>
     </form>
   </div>
 </div>
