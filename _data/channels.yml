@@ -1,0 +1,27 @@
+# Integration & Channel Cards
+- icon: 📱
+  label: "POS Systems"
+
+- icon: 🚗
+  label: "Delivery Apps"
+
+- icon: 💳
+  label: "Payment Gateways"
+
+- icon: 🎫
+  label: "Loyalty Programs"
+
+- icon: 📝
+  label: "Reservations"
+
+- icon: 📊
+  label: "Analytics"
+
+- icon: 📧
+  label: "Email Marketing"
+
+- icon: 💬
+  label: "SMS/Push"
+
+- icon: 🛍️
+  label: "E-Commerce"

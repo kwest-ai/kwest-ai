@@ -1,0 +1,20 @@
+# Features
+- icon: 👥
+  title: Unified Guest Profiles
+  description: Combine in-store, delivery, and loyalty data into a single timeline for every guest.
+  url: "#features"
+
+- icon: 📊
+  title: Guest Lifecycle Intelligence
+  description: Track acquisition, frequency, churn, and lifetime value across all touchpoints.
+  url: "#features"
+
+- icon: 🍽️
+  title: Menu Performance Analytics
+  description: Understand which items drive revenue, repeat visits, and guest satisfaction.
+  url: "#features"
+
+- icon: 🎯
+  title: Marketing Automation
+  description: Activate insights with targeted campaigns based on guest behavior and preferences.
+  url: "#features"

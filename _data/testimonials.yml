@@ -1,0 +1,21 @@
+# Testimonials with metrics
+- quote: "Kwest AI helped us increase repeat visits by 18% in just 3 months. The guest data visibility was transformative."
+  name: "Sarah Chen"
+  role: "VP of Operations, Urban Eats Group"
+  metrics:
+    - "+18% repeat visits"
+    - "3-month ROI"
+
+- quote: "We went from guessing to knowing. Menu optimization alone drove $120K in additional annual revenue across our 12 locations."
+  name: "Marcus Johnson"
+  role: "CEO, Heritage Kitchens Collective"
+  metrics:
+    - "+$120K annual revenue"
+    - "12-location scale"
+
+- quote: "Our marketing team now targets guests with precision. Customer acquisition cost dropped 24% while lifetime value increased."
+  name: "Jessica Williams"
+  role: "Marketing Director, Modern Bistro Brands"
+  metrics:
+    - "-24% CAC"
+    - "+CLV growth"

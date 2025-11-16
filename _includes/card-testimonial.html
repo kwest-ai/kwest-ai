@@ -1,0 +1,15 @@
+<!-- Testimonial Card Component -->
+<div class="card card-testimonial">
+  <blockquote class="card-testimonial__quote">{{ include.quote }}</blockquote>
+  <div class="card-testimonial__author">
+    <strong class="card-testimonial__name">{{ include.name }}</strong>
+    <span class="card-testimonial__role">{{ include.role }}</span>
+  </div>
+  {% if include.metrics %}
+    <div class="card-testimonial__metrics">
+      {% for metric in include.metrics %}
+        <span class="metric-chip">{{ metric }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
