@@ -1,11 +1,18 @@
 <!-- Feature Card Component -->
 <div class="card card-feature">
-  {% if include.icon %}
-    <div class="card-feature__icon">{{ include.icon }}</div>
+  {% if include.image %}
+    <div class="card-feature__image">
+      <img src="{{ include.image }}" alt="{{ include.title }}" loading="lazy">
+    </div>
   {% endif %}
-  <h3 class="card-feature__title">{{ include.title }}</h3>
-  <p class="card-feature__description">{{ include.description }}</p>
-  {% if include.url %}
-    <a href="{{ include.url }}" class="card-feature__link">Learn more →</a>
-  {% endif %}
+  <div class="card-feature__content">
+    {% if include.icon %}
+      <div class="card-feature__icon">{{ include.icon }}</div>
+    {% endif %}
+    <h3 class="card-feature__title">{{ include.title }}</h3>
+    <p class="card-feature__description">{{ include.description }}</p>
+    {% if include.url %}
+      <a href="{{ include.url }}" class="card-feature__link">Learn more →</a>
+    {% endif %}
+  </div>
 </div>

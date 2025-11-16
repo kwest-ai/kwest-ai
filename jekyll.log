@@ -1,0 +1,10 @@
+Configuration file: /Users/krkaushikkumar/Desktop/landing/kwest-ai/_config.yml
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: /Users/krkaushikkumar/Desktop/landing/kwest-ai
+       Destination: /Users/krkaushikkumar/Desktop/landing/kwest-ai/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.211 seconds.
+ Auto-regeneration: enabled for '/Users/krkaushikkumar/Desktop/landing/kwest-ai'
+    Server address: http://127.0.0.1:3000
+  Server running... press ctrl-c to stop.
