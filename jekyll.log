@@ -1,0 +1,620 @@
+Configuration file: /Users/krkaushikkumar/Desktop/landing/kwest-ai/_config.yml
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: /Users/krkaushikkumar/Desktop/landing/kwest-ai
+       Destination: /Users/krkaushikkumar/Desktop/landing/kwest-ai/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.211 seconds.
+ Auto-regeneration: enabled for '/Users/krkaushikkumar/Desktop/landing/kwest-ai'
+    Server address: http://127.0.0.1:3000
+  Server running... press ctrl-c to stop.
+      Regenerating: 2 file(s) changed at 2025-11-16 12:55:50
+                    index.html
+                    jekyll.log
+                    ...done in 0.972252 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:56:11
+                    assets/css/main.css
+                    ...done in 0.906403 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 12:56:32
+                    index.html
+                    jekyll.log
+                    ...done in 0.900245 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:57:02
+                    _layouts/default.html
+                    ...done in 0.913893 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:57:08
+                    _includes/card-feature.html
+                    ...done in 0.970874 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:57:47
+                    _data/features.yml
+                    ...done in 0.942969 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:58:20
+                    assets/css/main.css
+                    ...done in 0.886331 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 12:58:41
+                    index.html
+                    jekyll.log
+                    ...done in 0.880299 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:58:53
+                    assets/css/main.css
+                    ...done in 0.881907 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:59:04
+                    assets/css/main.css
+                    ...done in 0.891205 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:59:10
+                    assets/css/main.css
+                    ...done in 1.245953 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:59:16
+                    _layouts/default.html
+                    ...done in 0.869576 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 12:59:25
+                    index.html
+                    jekyll.log
+                    ...done in 0.889266 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 12:59:29
+                    index.html
+                    jekyll.log
+                    ...done in 0.877804 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 12:59:33
+                    assets/css/main.css
+                    ...done in 0.868451 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:04:57
+                    index.html
+                    jekyll.log
+                    ...done in 0.899324 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:05:05
+                    assets/css/main.css
+                    ...done in 0.875045 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:05:25
+                    _data/detailed_features.yml
+                    ...done in 0.878755 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:05:29
+                    _includes/card-detailed-feature.html
+                    ...done in 0.893246 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:05:35
+                    index.html
+                    jekyll.log
+                    ...done in 0.88512 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:05:44
+                    assets/css/main.css
+                    ...done in 0.862007 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:06:18
+                    index.html
+                    jekyll.log
+                    ...done in 0.884336 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:06:29
+                    assets/css/main.css
+                    ...done in 0.872507 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:07:00
+                    assets/css/main.css
+                    ...done in 0.873362 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:07:16
+                    _data/steps.yml
+                    ...done in 0.870086 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:07:26
+                    _includes/card-step.html
+                    ...done in 0.868978 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:07:39
+                    assets/css/main.css
+                    ...done in 0.871179 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:08:14
+                    _data/channels.yml
+                    ...done in 0.89188 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:08:27
+                    _includes/card-channel.html
+                    ...done in 0.877355 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:08:36
+                    assets/css/main.css
+                    ...done in 0.885759 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:15:15
+                    _data/channels.yml
+                    ...done in 0.889075 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:15:29
+                    assets/css/main.css
+                    ...done in 0.876063 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:15:36
+                    assets/css/main.css
+                    ...done in 0.940046 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:15:40
+                    assets/css/main.css
+                    ...done in 1.358636 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:15:47
+                    assets/css/main.css
+                    ...done in 0.879178 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:16:16
+                    assets/css/main.css
+                    ...done in 0.882928 seconds.
+                    
+      Regenerating: 17 file(s) changed at 2025-11-16 13:21:30
+                    _layouts/default.html
+                    _includes/card-channel.html
+                    _includes/card-step.html
+                    _includes/card-feature.html
+                    _includes/card-logo.html
+                    _includes/card-testimonial.html
+                    _includes/card-question.html
+                    _includes/card-security.html
+                    index.html
+                    _data/security.yml
+                    _data/testimonials.yml
+                    _data/questions.yml
+                    _data/channels.yml
+                    _data/features.yml
+                    _data/steps.yml
+                    assets/css/main.css
+                    jekyll.log
+                    ...done in 1.041434 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:22:38
+                    index.html
+                    jekyll.log
+                    ...done in 0.904937 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:27:45
+                    _data/detailed_features.yml
+                    ...done in 0.900254 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:28:33
+                    _data/channels.yml
+                    ...done in 0.888178 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:33:12
+                    _data/questions.yml
+                    ...done in 0.896926 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:33:20
+                    _includes/card-question.html
+                    ...done in 0.870613 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:33:47
+                    assets/css/main.css
+                    ...done in 0.908358 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:38:59
+                    _data/case_studies.yml
+                    ...done in 0.986873 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:39:03
+                    _includes/card-case-study.html
+                    ...done in 1.309118 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:39:05
+                    _includes/card-case-study.html
+                    ...done in 1.173818 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:39:11
+                    index.html
+                    jekyll.log
+                    ...done in 1.599553 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:39:21
+                    assets/css/main.css
+                    ...done in 1.203644 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:39:27
+                    _data/pricing.yml
+                    ...done in 0.872815 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:39:32
+                    _includes/card-pricing.html
+                    ...done in 0.889733 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:39:39
+                    index.html
+                    jekyll.log
+                    ...done in 0.862106 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:39:50
+                    assets/css/main.css
+                    ...done in 0.872662 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:39:58
+                    _layouts/default.html
+                    ...done in 0.861784 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:40:04
+                    assets/css/main.css
+                    ...done in 0.860841 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:45:51
+                    assets/css/main.css
+                    ...done in 0.90468 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:45:58
+                    index.html
+                    jekyll.log
+                    ...done in 0.871637 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:46:13
+                    index.html
+                    jekyll.log
+                    ...done in 0.869272 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:46:18
+                    _layouts/default.html
+                    ...done in 0.891254 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:47:54
+                    index.html
+                    jekyll.log
+                    ...done in 0.901967 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:48:41
+                    _data/pricing.yml
+                    _includes/card-pricing.html
+                    ...done in 0.871274 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:48:49
+                    assets/css/main.css
+                    ...done in 0.870602 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:49:00
+                    _layouts/default.html
+                    ...done in 0.87006 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:49:08
+                    assets/css/main.css
+                    ...done in 0.871067 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:49:59
+                    index.html
+                    jekyll.log
+                    ...done in 0.886961 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:05
+                    index.html
+                    jekyll.log
+                    ...done in 1.557364 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:10
+                    index.html
+                    jekyll.log
+                    ...done in 1.148886 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:15
+                    index.html
+                    jekyll.log
+                    ...done in 1.133144 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:23
+                    index.html
+                    jekyll.log
+                    ...done in 0.870782 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:27
+                    index.html
+                    jekyll.log
+                    ...done in 0.868688 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:35
+                    index.html
+                    jekyll.log
+                    ...done in 0.87998 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:40
+                    index.html
+                    jekyll.log
+                    ...done in 0.947127 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:44
+                    index.html
+                    jekyll.log
+                    ...done in 0.868986 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:49
+                    index.html
+                    jekyll.log
+                    ...done in 0.869586 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 13:50:53
+                    index.html
+                    jekyll.log
+                    ...done in 0.868542 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:50:59
+                    _layouts/default.html
+                    ...done in 0.87167 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:56:28
+                    assets/css/main.css
+                    ...done in 0.928291 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 13:57:20
+                    assets/css/main.css
+                    ...done in 0.901119 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:01:38
+                    assets/css/main.css
+                    ...done in 0.91212 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:01:48
+                    index.html
+                    jekyll.log
+                    ...done in 0.874967 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:01:53
+                    index.html
+                    jekyll.log
+                    ...done in 0.878514 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:02:01
+                    assets/css/main.css
+                    ...done in 0.883099 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:02:32
+                    assets/css/main.css
+                    ...done in 0.894114 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:05:09
+                    index.html
+                    jekyll.log
+                    ...done in 0.906215 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:05:15
+                    assets/css/main.css
+                    ...done in 1.107493 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:05:23
+                    _layouts/default.html
+                    ...done in 1.423374 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:08:00
+                    _layouts/default.html
+                    ...done in 0.918039 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:08:05
+                    index.html
+                    jekyll.log
+                    ...done in 0.873576 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:08:52
+                    assets/css/main.css
+                    ...done in 0.955389 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:10:46
+                    assets/css/main.css
+                    ...done in 0.888321 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:11:32
+                    assets/css/main.css
+                    ...done in 0.919869 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:11:38
+                    index.html
+                    jekyll.log
+                    ...done in 1.367088 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:12:01
+                    index.html
+                    jekyll.log
+                    ...done in 0.932684 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:12:08
+                    assets/css/main.css
+                    ...done in 0.869173 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:12:17
+                    _includes/card-feature.html
+                    ...done in 0.862663 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:13:08
+                    _includes/card-feature.html
+                    ...done in 0.876344 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:14:00
+                    assets/css/main.css
+                    ...done in 0.907712 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:14:38
+                    assets/css/main.css
+                    ...done in 0.895127 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:15:45
+                    assets/css/main.css
+                    ...done in 0.895814 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:15:54
+                    assets/css/main.css
+                    ...done in 0.885684 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:16:00
+                    assets/css/main.css
+                    ...done in 1.403672 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:35:25
+                    assets/css/main.css
+                    ...done in 0.913169 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:35:32
+                    assets/css/main.css
+                    ...done in 0.878929 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:35:44
+                    assets/css/main.css
+                    ...done in 0.870791 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:35:53
+                    assets/css/main.css
+                    ...done in 0.873105 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:36:06
+                    assets/css/main.css
+                    ...done in 0.890804 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:36:14
+                    assets/css/main.css
+                    ...done in 0.861939 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:36:21
+                    assets/css/main.css
+                    ...done in 0.870245 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:36:45
+                    assets/css/main.css
+                    ...done in 0.91537 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:39:51
+                    _layouts/default.html
+                    ...done in 0.900107 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:39:56
+                    assets/css/main.css
+                    ...done in 0.869387 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:40:11
+                    assets/css/main.css
+                    ...done in 0.866746 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:40:17
+                    assets/css/main.css
+                    ...done in 1.050244 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:40:22
+                    assets/css/main.css
+                    ...done in 1.071681 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:43:26
+                    assets/css/main.css
+                    ...done in 0.87813 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:43:47
+                    assets/css/main.css
+                    ...done in 0.896508 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:43:57
+                    assets/css/main.css
+                    ...done in 0.867192 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:44:07
+                    assets/css/main.css
+                    ...done in 0.862831 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:44:13
+                    assets/css/main.css
+                    ...done in 0.867652 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:44:21
+                    assets/css/main.css
+                    ...done in 0.865738 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:44:29
+                    assets/css/main.css
+                    ...done in 1.186889 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:44:38
+                    assets/css/main.css
+                    ...done in 0.882439 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:44:47
+                    assets/css/main.css
+                    ...done in 0.88189 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:44:54
+                    assets/css/main.css
+                    ...done in 1.163712 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:45:03
+                    assets/css/main.css
+                    ...done in 0.947542 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:45:10
+                    assets/css/main.css
+                    ...done in 0.885943 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:45:23
+                    assets/css/main.css
+                    ...done in 0.861565 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:45:31
+                    assets/css/main.css
+                    ...done in 0.866407 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:45:43
+                    assets/css/main.css
+                    ...done in 0.861056 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:47:26
+                    index.html
+                    jekyll.log
+                    ...done in 0.909513 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:47:40
+                    assets/css/main.css
+                    ...done in 0.866682 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:49:04
+                    assets/css/main.css
+                    ...done in 0.91156 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:49:12
+                    assets/css/main.css
+                    ...done in 0.867573 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:53:31
+                    assets/css/main.css
+                    ...done in 0.915456 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:53:49
+                    assets/css/main.css
+                    ...done in 0.879589 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:54:05
+                    assets/css/main.css
+                    ...done in 0.883595 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:54:36
+                    assets/css/main.css
+                    ...done in 0.957008 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:55:34
+                    assets/css/main.css
+                    ...done in 0.896079 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:55:45
+                    assets/css/main.css
+                    ...done in 0.924102 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-11-16 14:56:11
+                    assets/css/main.css
+                    ...done in 0.884366 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-11-16 14:57:44
+                    index.html
+                    jekyll.log
+                    ...done in 1.461251 seconds.
+                    

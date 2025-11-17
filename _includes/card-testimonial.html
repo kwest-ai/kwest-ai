@@ -1,0 +1,20 @@
+<!-- Testimonial Card Component -->
+<div class="card card-testimonial">
+  <blockquote class="card-testimonial__quote">{{ include.quote }}</blockquote>
+  <div class="card-testimonial__author">
+    {% if include.image %}
+      <img src="{{ include.image }}" alt="{{ include.name }}" class="card-testimonial__avatar" loading="lazy">
+    {% endif %}
+    <div class="card-testimonial__author-info">
+      <strong class="card-testimonial__name">{{ include.name }}</strong>
+      <span class="card-testimonial__role">{{ include.role }}</span>
+    </div>
+  </div>
+  {% if include.metrics %}
+    <div class="card-testimonial__metrics">
+      {% for metric in include.metrics %}
+        <span class="metric-chip">{{ metric }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

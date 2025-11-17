@@ -1,0 +1,24 @@
+# Features
+- icon: fas fa-user-friends
+  title: Unified Guest Profiles
+  description: Get a 360° view of every guest. Combine data from your POS, loyalty program, and online ordering to understand guest behavior and preferences.
+  url: "#features"
+  image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=500&h=400&fit=crop"
+
+- icon: fas fa-chart-line
+  title: Guest Lifecycle Intelligence
+  description: From first-time visitors to loyal regulars, track the entire guest journey. Identify opportunities to increase visit frequency and prevent churn.
+  url: "#features"
+  image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=500&h=400&fit=crop"
+
+- icon: fas fa-utensils
+  title: Menu Performance Analytics
+  description: Discover your hidden gems and underperformers. Analyze menu data to optimize your offerings, increase profitability, and delight your guests.
+  url: "#features"
+  image: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=500&h=400&fit=crop"
+
+- icon: fas fa-bullhorn
+  title: Marketing Automation
+  description: Turn insights into action. Create targeted marketing campaigns that drive results, from personalized promotions to automated feedback requests.
+  url: "#features"
+  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=400&fit=crop"
