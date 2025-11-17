@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -24,14 +24,15 @@
       <div class="container">
         <div class="nav-content">
           <a href="{{ '/' | relative_url }}" class="logo">
-            <img class="logo-img" src="/logo.png" alt="Kwest AI logo" style="height:28px; width:auto;">
+            <img class="logo-img" src="/logo.png" alt="Kwest AI logo" style="height:220px; width:auto;">
           </a>
           
           <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#steps">How it Works</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            
           </ul>
           
           <button class="nav-cta" onclick="openContactModal()">Get Started</button>
@@ -54,20 +55,14 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <img class="logo-img" src="/logo.png" alt="Kwest AI logo" style="height:32px; width:auto;">
-          </div>
-          <p class="footer-tagline">We help restaurants grow with data</p>
-        </div>
-        
+      
+      
+      <div class="footer-middle">
         <div class="footer-links">
           <div class="footer-column">
             <h4>Product</h4>
             <ul>
-              <li><a href="#advantage">Features</a></li>
-              <li><a href="#stats">Pricing</a></li>
+              <li><a href="#features">Features</a></li>
               <li><a href="#testimonials">Case Studies</a></li>
             </ul>
           </div>
@@ -75,9 +70,9 @@
           <div class="footer-column">
             <h4>Company</h4>
             <ul>
-              <li><a href="#problem">About Us</a></li>
-              <li><a href="#cta">Contact</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="https://www.linkedin.com/company/kwest-ai/jobs/">Careers</a></li>
             </ul>
           </div>
           
@@ -94,18 +89,8 @@
             <h4>Connect</h4>
             <ul>
               <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/company/kwest-ai/">LinkedIn</a></li>
             </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Stay up to date</h4>
-            <p>Get the latest news and updates from Kwest AI.</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Enter your email">
-              <button type="submit">Subscribe</button>
-            </form>
           </div>
         </div>
       </div>
@@ -133,6 +118,13 @@
         left: direction * scrollAmount,
         behavior: 'smooth'
       });
+    }
+
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     window.addEventListener('scroll', function() {

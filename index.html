@@ -6,7 +6,7 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 
 <!-- Hero Section -->
 <section class="hero-section">
-  <div class="container">
+  <div class="container hero-container">
     <div class="hero-content">
       <div class="hero-badge">
         <span class="pulse-dot"></span>
@@ -16,18 +16,145 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
       <h1 class="hero-title">The Modern Guest Data Platform for Restaurants</h1>
 
       <p class="hero-description">
-        Kwest AI is the single source of truth for all your guest data. Unify your POS, delivery, and loyalty data to make smarter decisions and drive revenue growth.
+        Kwest AI is the single source of truth for all your guest data. Unify your POS, delivery, and loyalty platforms to unlock actionable insights and accelerate revenue growth.
       </p>
 
       <div class="hero-ctas">
         <button class="cta-button cta-primary" onclick="openContactModal()">Book a demo</button>
-        <a href="#features" class="cta-button cta-secondary">Learn More</a>
+        <button class="cta-button cta-secondary" onclick="scrollToSection('features')">Explore features</button>
       </div>
 
-      <p class="hero-subtext">Used by multi-unit restaurant brands from fast casual to fine dining across 2,000+ locations worldwide.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">2,000+</span>
+          <span class="stat-label">Locations Worldwide</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">500M+</span>
+          <span class="stat-label">Guest Records</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">99.9%</span>
+          <span class="stat-label">Uptime SLA</span>
+        </div>
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="https://elements-cover-images-0.imgix.net/a11be24c-7a26-4293-9c84-802c77f0906a?auto=compress%2Cformat&fit=max&w=1370&s=1f953046f40751996765793473b1d9d9" alt="Kwest AI Dashboard">
+    
+    <div class="hero-dashboard">
+      <!-- Dashboard Browser Window -->
+      <div class="dashboard-browser">
+        <div class="browser-header">
+          <div class="browser-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="browser-address">
+            <span class="lock-icon">🔒</span>
+            <span class="url">app.kwest.ai/dashboard</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-content">
+          <!-- Dashboard Header -->
+          <div class="dashboard-header">
+            <div class="dashboard-title">
+              <h3>Restaurant Analytics</h3>
+              <p class="dashboard-subtitle">Real-time insights across all locations</p>
+            </div>
+            <div class="dashboard-time">
+              <span class="live-indicator"></span>
+              Live
+            </div>
+          </div>
+          
+          <!-- Animated Dashboard Sections -->
+          <div class="dashboard-grid">
+            <!-- Revenue Chart GIF Area -->
+            <div class="dashboard-widget widget-large">
+              <div class="widget-header">
+                <span class="widget-icon">📈</span>
+                <span class="widget-title">Revenue Trends</span>
+              </div>
+              <div class="chart-container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWR3ZjBvNnZqYWE4ZnM2NG5xN3F0YzBvNmJ4ZnBxYzB2Zm9mOGN6ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPEqDGUULpEU0aQ/giphy.gif" alt="Revenue Analytics Chart" class="dashboard-gif">
+                <div class="chart-overlay">
+                  <div class="metric-display">
+                    <span class="metric-value">$847,392</span>
+                    <span class="metric-label">This Month</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Guest Analytics GIF Area -->
+            <div class="dashboard-widget widget-medium">
+              <div class="widget-header">
+                <span class="widget-icon">👥</span>
+                <span class="widget-title">Guest Activity</span>
+              </div>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-number">2,847</div>
+                  <div class="stat-label">New Guests</div>
+                  <div class="stat-trend positive">↗ +12%</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">68%</div>
+                  <div class="stat-label">Return Rate</div>
+                  <div class="stat-trend positive">↗ +5%</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Live Orders Animation -->
+            <div class="dashboard-widget widget-medium">
+              <div class="widget-header">
+                <span class="widget-icon">🔥</span>
+                <span class="widget-title">Live Orders</span>
+              </div>
+              <div class="orders-feed">
+                <div class="order-item order-1">
+                  <span class="order-location">Downtown</span>
+                  <span class="order-amount">$42.50</span>
+                </div>
+                <div class="order-item order-2">
+                  <span class="order-location">Midtown</span>
+                  <span class="order-amount">$67.80</span>
+                </div>
+                <div class="order-item order-3">
+                  <span class="order-location">Westside</span>
+                  <span class="order-amount">$31.25</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Performance Metrics -->
+            <div class="dashboard-widget widget-small">
+              <div class="widget-header">
+                <span class="widget-icon">⚡</span>
+                <span class="widget-title">Performance</span>
+              </div>
+              <div class="performance-bars">
+                <div class="bar-item">
+                  <span class="bar-label">Sales</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="bar-item">
+                  <span class="bar-label">Traffic</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 72%;"></div></div>
+                </div>
+                <div class="bar-item">
+                  <span class="bar-label">Growth</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 93%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -38,10 +165,8 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
     <h3 class="trusted-by-title">Trusted by restaurants nationwide</h3>
     <div class="logos-grid">
       <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-1495593-1267764.png" alt="Restaurant Logo 1">
-      <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-176-111405.png" alt="Restaurant Logo 2">
       <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-1851559-1569269.png" alt="Restaurant Logo 3">
       <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-1659556-1410015.png" alt="Restaurant Logo 4">
-      <img src="https://cdn.iconscout.com/icon/free/png-256/restaurant-218-111415.png" alt="Restaurant Logo 5">
     </div>
   </div>
 </section>
@@ -64,8 +189,15 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 <!-- Features Section -->
 <section class="features-section fade-in-section section-divider" id="features">
   <div class="container">
-    <h2 class="section-title">Turning data into action</h2>
-    <p class="section-subtitle">Kwest AI empowers restaurants with the same guest intelligence tools as enterprise retail.</p>
+    <div class="section-header">
+      <div class="section-badge">
+        <span class="badge-dot"></span>
+        Core Capabilities
+      </div>
+      <h2 class="section-title">Turning data into action</h2>
+      <p class="section-subtitle">Kwest AI empowers restaurants with the same guest intelligence tools as enterprise retail.</p>
+      <div class="section-accent-line"></div>
+    </div>
 
     <div class="features-grid">
       {% for feature in site.data.features %}
@@ -78,6 +210,16 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 <!-- Detailed Features Section -->
 <section class="detailed-features-section fade-in-section">
   <div class="container">
+    <div class="section-header">
+      <div class="section-badge">
+        <span class="badge-dot"></span>
+        Platform Deep Dive
+      </div>
+      <h2 class="section-title">The complete restaurant intelligence platform</h2>
+      <p class="section-subtitle">Everything you need to understand your guests, optimize your operations, and grow your business.</p>
+      <div class="section-accent-line"></div>
+    </div>
+
     <div class="detailed-features-wrapper" id="detailed-features-wrapper">
       {% for feature in site.data.detailed_features %}
         {% include card-detailed-feature.html title=feature.title description=feature.description image=feature.image %}
@@ -93,8 +235,15 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 <!-- Integrations Section -->
 <section class="integrations-section fade-in-section">
   <div class="container">
-    <h2 class="section-title">Connect all your data</h2>
-    <p class="section-subtitle">Kwest AI integrates with every system you use—POS, delivery, loyalty, marketing, payments, and more.</p>
+    <div class="section-header">
+      <div class="section-badge">
+        <span class="badge-dot"></span>
+        Integrations
+      </div>
+      <h2 class="section-title">Connect all your data</h2>
+      <p class="section-subtitle">Kwest AI integrates with every system you use—POS, delivery, loyalty, marketing, payments, and more.</p>
+      <div class="section-accent-line"></div>
+    </div>
 
     <div class="channels-grid">
       {% for channel in site.data.channels %}
@@ -105,7 +254,7 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 </section>
 
 <!-- Testimonials Section -->
-<section class="testimonials-section fade-in-section section-divider">
+<section class="testimonials-section fade-in-section section-divider" id="testimonials">
   <div class="container">
     <h2 class="section-title">Fueling growth for restaurant brands</h2>
     <p class="section-subtitle">Real results from real restaurants using Kwest AI.</p>
@@ -160,7 +309,8 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 </section>
 
 <!-- Steps Section -->
-<section class="steps-section fade-in-section" id="steps">
+<!-- How it Works Section -->
+<section class="steps-section fade-in-section" id="how-it-works">
   <div class="container">
     <h2 class="section-title">How Kwest AI works</h2>
     <p class="section-subtitle">Three simple steps to transform your restaurant operations.</p>
@@ -187,9 +337,32 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
   <div class="contact-modal-content">
     <button class="contact-modal-close" onclick="closeContactModal()">✕</button>
     <h2>Get started with Kwest AI</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your name" required>
-      <input type="email" placeholder="Work email" required>
+    <form class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfza_epELBi4V87fw0ygOL_0_mm_f7mDLYisQJzxC98Rt9M8w/formResponse" method="POST" target="_blank">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="entry.2087058166" placeholder="Your full name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="entry.1371429100" placeholder="Work email address" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="entry.833693761" placeholder="Company name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="entry.1797913493" placeholder="Phone number" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="entry.1540050008" placeholder="Tell us about your needs..." rows="4"></textarea>
+      </div>
+      
       <button type="submit" class="cta-button cta-primary">Book a Demo</button>
     </form>
   </div>
@@ -199,7 +372,69 @@ description: Turn guest data into revenue. Kwest AI is the customer data platfor
 function openContactModal() {
   document.getElementById('contactModal').classList.add('active');
 }
+
 function closeContactModal() {
   document.getElementById('contactModal').classList.remove('active');
+  // Reset form when closing
+  document.querySelector('.contact-form').reset();
+}
+
+// Handle form submission
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.querySelector('.contact-form');
+  
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    
+    // Submit to Google Forms
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSfza_epELBi4V87fw0ygOL_0_mm_f7mDLYisQJzxC98Rt9M8w/formResponse', {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(response => {
+      // Show success message
+      showSuccessMessage();
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Close modal after 2 seconds
+      setTimeout(function() {
+        closeContactModal();
+      }, 2000);
+    }).catch(error => {
+      console.error('Error:', error);
+      alert('There was an error submitting the form. Please try again.');
+    });
+  });
+});
+
+// Success message function
+function showSuccessMessage() {
+  const modal = document.getElementById('contactModal');
+  const content = modal.querySelector('.contact-modal-content');
+  
+  // Hide form
+  document.querySelector('.contact-form').style.display = 'none';
+  
+  // Create success message
+  const successMsg = document.createElement('div');
+  successMsg.className = 'success-message';
+  successMsg.innerHTML = `
+    <div class="success-icon">✓</div>
+    <h3>Thank you!</h3>
+    <p>We've received your demo request. Our team will reach out to you shortly.</p>
+  `;
+  
+  // Append to modal
+  content.appendChild(successMsg);
+  
+  // Show success message
+  setTimeout(() => {
+    successMsg.classList.add('show');
+  }, 100);
 }
 </script>
